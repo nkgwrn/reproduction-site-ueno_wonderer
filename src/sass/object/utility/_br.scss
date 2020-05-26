@@ -1,0 +1,23 @@
+.u-brSp {
+  display: none;
+  @include mqSm {
+    display: block;
+  }
+}
+
+.u-brTab {
+  display: none;
+  @include mqMd {
+    display: inline-block;
+  }
+
+  @include mqSm {
+    display: none;
+  }
+}
+
+.u-brPc {
+  @include mqMd {
+    display: none !important;
+  }
+}

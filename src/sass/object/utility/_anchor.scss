@@ -1,0 +1,8 @@
+.u-anchor {
+
+  @include mqMd {
+    padding-top: 62px;
+    margin-top: -62px;
+
+  }
+}

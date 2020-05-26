@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* =========================================================
+ Foundation
+========================================================= */
+@import "foundation/variables";
+@import "foundation/mixin";
+@import "foundation/animation";
+@import "foundation/reset";
+@import "foundation/base";
+/* =========================================================
+ Layout
+========================================================= */
+@import "layout/header";
+@import "layout/footer";
+// @import "layout/gnav";
+@import "layout/main";
+/* =========================================================
+ Object
+========================================================= */
+/* ---------------------------------------------------------
+ Component
+--------------------------------------------------------- */
+// 複数ページに渡って使いまわす、粒度の小さいコンポーネントを追加していく
+@import "object/component/container";
+@import "object/component/card";
+@import "object/component/panel";
+@import "object/component/btn";
+@import "object/component/capture";
+/* ---------------------------------------------------------
+ Project
+--------------------------------------------------------- */
+// コンポーネントより粒度の大きいもの（とあるページでしか使わないものなど）を追加していく
+// @import "object/project/mv";
+/* ---------------------------------------------------------
+ Utility
+--------------------------------------------------------- */
+//いわゆる汎用クラスのことで、ほとんどの場合で単一のスタイルを持っています。
+//確実にスタイルを適応させるために!importantを指定します。
+@import "object/utility/border";
+@import "object/utility/margin";
+@import "object/utility/font";
+@import "object/utility/show";
+@import "object/utility/br";

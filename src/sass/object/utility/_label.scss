@@ -1,0 +1,25 @@
+.u-label {
+	display: inline-block;
+	border: 1px solid $color-red-dark;
+	color: $color-red-dark;
+	padding: 0.1em 1em;
+	font-weight: bold;
+	font-size: 0.875em;
+
+	&.-red {
+		border: 1px solid $color-red;
+		color: $color-red;
+	}
+	&.-white {
+		border: 1px solid #fff;
+		color: #fff;
+	}
+}
+
+.u-kome {
+	padding-left: 1em;
+	&::before {
+		content: "※";
+		margin-left: -1em;
+	}
+}

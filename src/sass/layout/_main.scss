@@ -1,0 +1,5 @@
+.l-main {
+  @include mqMd {
+    margin-top: 50px;
+  }
+}

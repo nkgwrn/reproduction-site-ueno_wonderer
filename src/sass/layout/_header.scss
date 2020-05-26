@@ -1,0 +1,138 @@
+.l-header {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  padding: 5px 20px 5px 5px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  @include mqMd {
+    height: 50px;
+    background: #454545;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &-logo {
+    display: block;
+    height: 100%;
+
+    @include mqMd {
+      display: none;
+    }
+
+    &__img {
+      max-height: 100%;
+    }
+  }
+
+  &-nav {
+    @include mqMd {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #000;
+      opacity: 0;
+      // display: none;
+      transition: all 0.3s linear;
+    }
+
+    &.is-open {
+      opacity: 1;
+      display: block;
+    }
+  }
+
+  &-toggle {
+    display: none;
+    @include mqMd {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      width: 24px;
+      height: 15px;
+
+      &__item {
+        display: block;
+        width: 24px;
+        height: 1px;
+        background: #bbb;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        &--center {
+          top: 7px;
+        }
+
+        &--bottom {
+          top: 14px;
+        }
+      }
+    }
+
+    &.is-active {
+      .l-header-toggle {
+        &__item {
+          &--top {
+            transform: rotate(45deg);
+            top: 8px;
+          }
+
+          &--center {
+            display: none;
+          }
+
+          &--bottom {
+            transform: rotate(-45deg);
+            top: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.l-nav {
+  display: flex;
+  font-size: 0.875em;
+
+  @include mqMd {
+    height: 100%;
+    display: block;
+    padding: 35px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+    transition-delay: 0.01s;
+  }
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__item {
+    margin-left: 55px;
+
+    @include mqMd {
+      margin-left: 0;
+      text-align: left;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      margin-bottom: 1rem;
+    }
+
+    &__link {
+      color: #fff;
+
+      &:hover {
+        color: #98a7b4;
+      }
+    }
+  }
+}

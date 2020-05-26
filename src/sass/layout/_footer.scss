@@ -1,0 +1,117 @@
+.l-footer {
+  background-color: rgb(223, 225, 225);
+  text-align: left;
+  padding-top: 65px;
+  padding-bottom: 200px;
+  font-size: 0.875em;
+
+  @include mqMd {
+    padding-bottom: 50px;
+  }
+
+  @include mqSm {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+
+    @include mqSm {
+      display: block;
+      padding: 0;
+    }
+
+    &__item {
+      flex: 1;
+
+      @include mqMd {
+        margin-bottom: 30px;
+        width: 25%;
+      }
+
+      @include mqSm {
+        width: 100%;
+      }
+
+      &:last-child {
+        flex: 1.5;
+
+        @include mqMd {
+          flex: 1;
+        }
+      }
+
+      &--head {
+        font-size: 24px;
+        font-weight: 700;
+        color: rgb(189, 189, 189);
+        word-wrap: break-word;
+
+        @include mqSm {
+          font-size: 18px;
+        }
+      }
+
+      &--body {
+        margin-top: 25px;
+      }
+    }
+
+    &--sub {
+      &__item {
+        margin-bottom: 10px;
+
+        > a {
+          border-bottom: 1px solid #bbb;
+          color: $link-color;
+          transition: 0.3s $ease-easeOut;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+
+    &--signin {
+      margin-top: 50px;
+
+      &__input {
+        width: 100%;
+        background: #fff;
+        padding: 12px 15px;
+
+        @include mqSm {
+          width: 70%;
+        }
+
+        > input[type="text"] {
+          width: 100%;
+
+          &::placeholder {
+            color: rgb(189, 189, 189);
+          }
+        }
+      }
+
+      &__btn {
+        margin-top: 18px;
+
+        > input[type="button"] {
+          border: 2px solid #fff;
+          padding: 12px 35px;
+          color: #fff;
+          transition: 0.3s $ease-easeOut;
+
+          &:hover {
+            background-color: #fff;
+            color: $link-color;
+          }
+        }
+      }
+    }
+  }
+}

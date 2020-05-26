@@ -1,0 +1,107 @@
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// .p-block {
+// 	width: 600px;
+// 	height: 300px;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	background: #fff;
+// 	border: 1px solid #ccc;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	& ~ & {
+// 		margin-top: 700px;
+// 	}
+// }
+
+// .js-inView {
+// 	&.is-show {
+// 		opacity: 1;
+// 		transform: translate(0);
+// 		transition-property: opacity, transform;
+// 		transition-duration: 1.2s;
+// 		transition-timing-function: cubic-bezier(.24, 1, .32, 1);
+// 		transform: scale(1, 1);
+// 	}
+// }
+
+// .js-inView-fadeInUp {
+// 	opacity: 0;
+// 	transform: translateY(50px);
+// }
+
+// .js-inView-fadeInLeft {
+// 	opacity: 0;
+// 	transform: translateX(-50px);
+// }
+
+// .js-inView-fadeInRight {
+// 	opacity: 0;
+// 	transform: translateX(50px);
+// }
+
+// .js-inView-fadeInRightUp {
+// 	opacity: 0;
+// 	transform: translate(50px, -50px);
+
+// }
+
+// .js-inView-zoomIn {
+// 	transform: scale(0, 0);
+// }
+
+.js-fadein {
+  opacity: 0;
+  transition: all 0.8s ease;
+
+  &.is-show {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.js-fadein--up {
+  transform: translate(0, 20px);
+}
+
+.js-fadein--rl {
+  transform: translate(-20px, 0);
+}
+
+.js-fadein--lr {
+  transform: translate(20px, 0);
+}
+
+#c-pagetop {
+  position: fixed;
+  right: 1%;
+  bottom: 3%;
+  opacity: 0;
+  // -ms-filter: "alpha( opacity=0 )";
+  // filter: alpha(opacity:0);
+  zoom: 1;
+  z-index: 9999;
+
+  @include mqMd {
+    right: 4%;
+    bottom: 2.5%;
+  }
+
+  > a {
+    display: block;
+    padding: 2px 19px 8px;
+    background: #bbb;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+}
