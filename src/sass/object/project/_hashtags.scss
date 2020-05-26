@@ -1,0 +1,25 @@
+.p-hashtags {
+  height: auto;
+
+  &-left {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+
+    &__head {
+      display: block;
+    }
+
+    &__title {
+      width: 15%;
+    }
+
+    &__copy {
+      font-size: 1rem;
+    }
+  }
+
+  &-right {
+  }
+}

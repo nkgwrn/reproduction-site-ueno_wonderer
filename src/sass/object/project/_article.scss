@@ -1,0 +1,96 @@
+.p-article {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 32.5vw;
+
+    > a {
+      padding: 2.5rem 2em;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: $link-color-article;
+    }
+
+    &--01 {
+      background-image: url(../image/img_article_01.jpg);
+    }
+    &--02 {
+      background-image: url(../image/img_article_02.jpg);
+    }
+    &--03 {
+      background-image: url(../image/img_article_03.jpg);
+    }
+    &--04 {
+      background-image: url(../image/img_article_04.jpg);
+    }
+    &--05 {
+      background-image: url(../image/img_article_05.jpg);
+    }
+    &--06 {
+      background-image: url(../image/img_article_06.jpg);
+    }
+    &--07 {
+      background-image: url(../image/img_article_07.jpg);
+    }
+    &--08 {
+      background-image: url(../image/img_article_08.jpg);
+    }
+    &--09 {
+      background-image: url(../image/img_article_09.jpg);
+    }
+    &--10 {
+      background-image: url(../image/img_article_10.jpg);
+    }
+    &--11 {
+      background-image: url(../image/img_article_11.jpg);
+    }
+    &--12 {
+      background-image: url(../image/img_article_12.jpg);
+    }
+    &--13 {
+      background-image: url(../image/img_article_13.jpg);
+    }
+    &--14 {
+      background-image: url(../image/img_article_14.jpg);
+    }
+    &--15 {
+      background-image: url(../image/img_article_15.jpg);
+    }
+    &--16 {
+      background-image: url(../image/img_article_16.jpg);
+    }
+    &--17 {
+      background-image: url(../image/img_article_17.jpg);
+    }
+    &--18 {
+      background-image: url(../image/img_article_18.jpg);
+    }
+    &--19 {
+      background-image: url(../image/img_article_19.jpg);
+    }
+    &--20 {
+      background-image: url(../image/img_article_20.jpg);
+    }
+  }
+
+  &__head {
+    @include font-otf;
+    font-size: 1.8rem;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+
+    > * {
+      padding-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.p-mv {
+  &-left {
+    background-color: rgb(242, 240, 237);
+  }
+
+  &-right {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px 80px;
+    align-items: flex-end;
+
+    &__head,
+    &__lead {
+      width: 50%;
+    }
+
+    &__lead {
+      font-size: 1.2rem;
+      line-height: 1.9;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+}

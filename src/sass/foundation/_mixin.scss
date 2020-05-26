@@ -6,7 +6,7 @@
   }
 }
 @mixin mqDp {
-	@media only screen and (max-width: $widthDp + px) {
+  @media only screen and (max-width: $widthDp + px) {
     @content;
   }
 }
@@ -33,10 +33,10 @@
 // フォントサイズ
 // --------------------
 @mixin fontSize($sizeValue, $type: pc) {
-  @if $type == 'pc' {
+  @if $type == "pc" {
     font-size: ($sizeValue * 10) + px;
     font-size: ($sizeValue * 1) + rem;
-  } @else if $type == 'sp' {
+  } @else if $type == "sp" {
     font-size: $sizeValue * 10px;
     font-size: get_vw($sizeValue);
   }
@@ -103,7 +103,7 @@
 }
 
 @mixin mincho {
-  font-family: 'Hiragino Mincho ProN', 游明朝, 'Yu Mincho', YuMincho, HGS明朝E,
+  font-family: "Hiragino Mincho ProN", 游明朝, "Yu Mincho", YuMincho, HGS明朝E,
     メイリオ, Meiryo, serif;
   @media all and (-ms-high-contrast: none) {
     font-family: HGS明朝E, メイリオ, Meiryo, serif;
@@ -112,4 +112,10 @@
 
 @mixin boxShadow {
   box-shadow: 0 1px 6px rgba(#000, 0.15);
+}
+
+@mixin font-otf {
+  font-family: $font-family-otf;
+  font-weight: 600;
+  font-style: normal;
 }

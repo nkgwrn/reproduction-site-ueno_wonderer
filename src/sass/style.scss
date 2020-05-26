@@ -22,16 +22,16 @@
  Component
 --------------------------------------------------------- */
 // 複数ページに渡って使いまわす、粒度の小さいコンポーネントを追加していく
-@import "object/component/container";
-@import "object/component/card";
 @import "object/component/panel";
-@import "object/component/btn";
-@import "object/component/capture";
+@import "object/component/copyright";
+@import "object/component/heading";
 /* ---------------------------------------------------------
  Project
 --------------------------------------------------------- */
 // コンポーネントより粒度の大きいもの（とあるページでしか使わないものなど）を追加していく
-// @import "object/project/mv";
+@import "object/project/mv";
+@import "object/project/hashtags";
+@import "object/project/article";
 /* ---------------------------------------------------------
  Utility
 --------------------------------------------------------- */
@@ -42,3 +42,4 @@
 @import "object/utility/font";
 @import "object/utility/show";
 @import "object/utility/br";
+@import "object/utility/vertical";

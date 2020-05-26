@@ -1,23 +1,458 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <meta charset="utf-8">
-    <meta name="generator" content="GitLab Pages">
-    <title>Plain HTML site using GitLab Pages</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="navbar">
-      <a href="https://pages.gitlab.io/plain-html/">Plain HTML Example</a>
-      <a href="https://gitlab.com/pages/plain-html/">Repository</a>
-      <a href="https://gitlab.com/pages/">Other Examples</a>
-    </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    東京上野ワンダラー（Tokyo Ueno Wonderer）|
+    上野の美術館を中心とした「今」がわかるシティガイドです
+  </title>
+  <script>
+    (function (d) {
+      var config = {
+          kitId: "hle7ejr",
+          scriptTimeout: 3000,
+          async: true,
+        },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className =
+            h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || (a && a != "complete" && a != "loaded")) return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config);
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s);
+    })(document);
+  </script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.0/css/swiper.min.css"
+  />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.0/js/swiper.min.js"></script>
+  <script src="./js/index.js" defer></script>
+</head>
 
-    <h1>Hello World!</h1>
+  <body id="wrapper">
+    <header class="l-header">
+  <!-- <a href="" class="l-header-logo"
+    ><img src="image/img_nature.png" alt="" class="l-header-logo__img"
+  /></a>
+  <nav class="l-header-nav" id="js-headNav">
+    <ul class="l-nav" id="js-nav">
+      <li class="l-nav__item">
+        <a href="" class="l-nav__item__link"
+          ><span class="u-m1c u-show-pc">Nature Remo</span
+          ><span class="u-m1c u-show-md u-black">NATURE REMO</span></a
+        >
+      </li>
+      <li class="l-nav__item">
+        <a href="" class="l-nav__item__link"
+          ><span class="u-m1c u-show-pc">Nature Remo E</span
+          ><span class="u-m1c u-show-md u-black">NATURE REMO E</span></a
+        >
+      </li>
+      <li class="l-nav__item">
+        <a href="" class="l-nav__item__link">ミッション</a>
+      </li>
+      <li class="l-nav__item">
+        <a href="" class="l-nav__item__link">ブログ</a>
+      </li>
+      <li class="l-nav__item">
+        <a href="" class="l-nav__item__link">お知らせ</a>
+      </li>
+      <li class="l-nav__item">
+        <a href="" class="l-nav__item__link">ヘルプセンター</a>
+      </li>
+      <li class="l-nav__item">
+        <a href="" class="l-nav__item__link"
+          ><span class="u-m1c u-show-pc">English</span
+          ><span class="u-m1c u-show-md u-black">ENGLISH</span></a
+        >
+      </li>
+    </ul>
+  </nav>
+  <div class="l-header-toggle" id="js-toggle">
+    <span class="l-header-toggle__item l-header-toggle__item--top"></span>
+    <span class="l-header-toggle__item l-header-toggle__item--center"></span>
+    <span class="l-header-toggle__item l-header-toggle__item--bottom"></span>
+  </div> -->
+</header>
+<!-- /.l-header -->
 
-    <p>
-      This is a simple plain-HTML website on GitLab Pages, without any fancy static site generator.
-    </p>
+    <main class="l-main">
+      <section class="c-panel p-mv">
+        <div class="c-panel__box p-mv-left"></div>
+        <div class="c-panel__box p-mv-right">
+          <div class="p-mv-right__head">
+            <h1 class="p-mv-right__title">
+              <img
+                src="image/img_logo.svg"
+                alt="Tokyo Ueno Wonderer"
+                class="p-mv-right__img"
+              />
+            </h1>
+            <p class="u-font-heebo">
+              Copyright &copy;Tokyo-Ueno Wonderer
+            </p>
+          </div>
+          <div class="p-mv-right__lead u-vertical">
+            Tokyo Ueno Wondererは<br />上野の文化をつなぐウェブサイト。<br />
+            ミュージアムに大学、ホール、<br />ショップにカフェ、寺社や史跡。<br />
+            そして、この街を形づくる人たち。<br />
+            文化の聖地を歩くWonderer（探求者）の目線で、<br />
+            東京・上野の魅力を紹介します。
+          </div>
+        </div>
+      </section>
+      <section class="c-panel p-hashtags">
+        <div class="c-panel__box p-hashtags-left">
+          <a class="p-hashtags-left__head">
+            <p class="p-hashtags-left__title">
+              <img
+                src="image/img_logo.svg"
+                alt="Tokyo Ueno Wonderer"
+                class=""
+              />
+            </p>
+            <p class="u-font-heebo p-hashtags-left__copy">
+              Copyright &copy;Tokyo-Ueno Wonderer
+            </p>
+          </a>
+          <div class="p-hashtags-left__body">
+            <div class="c-title">Hashtags</div>
+            <div>
+              <ul>
+                <li><a href="">すべて表示</a></li>
+                <li><a href="">UENOYES</a></li>
+                <li><a href="">アーティスト</a></li>
+                <li><a href="">アート</a></li>
+                <li><a href="">お守り</a></li>
+                <li><a href="">Tags</a></li>
+                <li><a href="">Tags</a></li>
+                <li><a href="">Tags</a></li>
+                <li><a href="">Tags</a></li>
+                <li><a href="">Tags</a></li>
+                <li><a href="">Tags</a></li>
+                <li><a href="">Tags</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="c-panel__box p-hashtags-right p-article">
+          <article class="p-article__item p-article__item--01">
+            <a href="">
+              <h2 class="p-article__head">
+                葵の御紋も見つかる!? 上野の“江戸”が香る場所へ
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--02">
+            <a href="">
+              <h2 class="p-article__head">
+                大人だけじゃもったいない！ 子どもと一緒に楽しむ上野
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--03">
+            <a href="">
+              <h2 class="p-article__head">
+                大人だけじゃもったいない！ 子どもと一緒に楽しむ上野
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--04">
+            <a href="">
+              <h2 class="p-article__head">
+                桜も梅も、文化行事も。季節を感じに、上野へ行こう
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--05">
+            <a href="">
+              <h2 class="p-article__head">
+                歴史ある建築に宿る、オープンでやわらかな児童書の世界
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--06">
+            <a href="">
+              <h2 class="p-article__head">
+                子どもの本の図書館が案内する、アートの魅力
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--07">
+            <a href="">
+              <h2 class="p-article__head">
+                上野最古のお堂 清水観音堂で願い玉を投げよう
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--08">
+            <a href="">
+              <h2 class="p-article__head">
+                観るだけじゃないんです！ 体験できるアート＆カルチャー
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--09">
+            <a href="">
+              <h2 class="p-article__head">
+                “本物”が身近にある街・上野。気軽に立ち寄れる、とっておきの場所
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--10">
+            <a href="">
+              <h2 class="p-article__head">
+                日本を代表する彫刻家、朝倉文夫の庭園で感じる四季の移ろい
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--11">
+            <a href="">
+              <h2 class="p-article__head">
+                上野の文化を支える人たち、紹介します
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--12">
+            <a href="">
+              <h2 class="p-article__head">
+                上野駅から朝倉彫塑館へ。朝倉文夫作品を訪ね歩く
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--13">
+            <a href="">
+              <h2 class="p-article__head">
+                谷中の「七福猫」を探せ！
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--14">
+            <a href="">
+              <h2 class="p-article__head">
+                和太鼓、獅子舞、寛永寺。トーハクに縁起物が勢ぞろい！
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--15">
+            <a href="">
+              <h2 class="p-article__head">
+                今年の干支・ネズミは「幸福の使者」
+                <br />トーハクにキュートなネズミが大集合！
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--16">
+            <a href="">
+              <h2 class="p-article__head">
+                人類進化学者の海部陽介がアーティストたちと語る！<br />
+                なぜ、人類は海の道を渡ったのか？
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--17">
+            <a href="">
+              <h2 class="p-article__head">
+                エキスパートが登場！ 展覧会が10倍楽しくなる方法、教えます
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--18">
+            <a href="">
+              <h2 class="p-article__head">
+                現役作家の作品に触れたい！ アートが生まれる場所を歩く
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--19">
+            <a href="">
+              <h2 class="p-article__head">
+                動物園や美術館の後は、上野でお茶する？ ご飯行く？
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+          <article class="p-article__item p-article__item--20">
+            <a href="">
+              <h2 class="p-article__head">
+                日常生活に取り入れたい、上野カルチャーをテイクアウト！
+              </h2>
+              <ul class="p-article__tags">
+                <li>#tags</li>
+                <li>#tags</li>
+                <li>#tags</li>
+              </ul>
+            </a>
+          </article>
+        </div>
+      </section>
+      <section class="c-panel p-outline">
+        <div></div>
+      </section>
+    </main>
+    <!-- /.l-main -->
+    <footer class="l-footer"></footer>
+<!-- /.l-footer -->
+
   </body>
 </html>
-

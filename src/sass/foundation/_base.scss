@@ -10,15 +10,6 @@ body {
   -webkit-text-size-adjust: 100%;
   letter-spacing: 0.01em;
   line-height: $line-height-default;
-  text-align: center;
-
-  // @include mqMd {
-  //   @include fontSize($font-size-tab);
-  // }
-
-  // @include mqSm {
-  //   @include fontSize($font-size-sp, sp);
-  // }
 }
 
 @media all and (-ms-high-contrast: none) {
@@ -39,7 +30,7 @@ body {
 }
 
 a {
-  color: $color-blue;
+  color: $font-color;
   text-decoration: none;
   @include transition(color);
   cursor: pointer;

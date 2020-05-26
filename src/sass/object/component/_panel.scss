@@ -1,45 +1,8 @@
 .c-panel {
-  padding-bottom: 40px;
-  background-color: #fff;
+  display: flex;
+  height: 100vh;
 
-  &__head {
-    font-size: 2em;
-    padding-top: 110px;
-    line-height: 1.8;
-    margin-bottom: 10px;
-
-    @include mqSm {
-      font-size: 22px;
-      padding-top: 30px;
-    }
-
-    &--top {
-      padding-top: 50px;
-    }
-
-    &--sub {
-      padding-top: 30px;
-      padding-bottom: 5px;
-    }
-  }
-
-  &__body {
-    font-size: 0.875em;
-
-    &--txt {
-      line-height: 2.2;
-
-      @include mqMd {
-        margin-bottom: 1em;
-      }
-
-      &:last-of-type {
-        margin-bottom: 30px;
-      }
-
-      @include mqMd {
-        line-height: 1.4;
-      }
-    }
+  &__box {
+    width: 50%;
   }
 }
