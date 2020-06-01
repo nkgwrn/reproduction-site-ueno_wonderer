@@ -77,6 +77,24 @@
     &--20 {
       background-image: url(../image/img_article_20.jpg);
     }
+
+    &--more {
+      width: 100%;
+      height: auto;
+      padding: 100px 0;
+      color: #bebebe;
+      font-size: 1.4rem;
+      text-align: center;
+      font-family: $font-family-heebo;
+      font-weight: 500;
+      transition: all 0.5s ease;
+      cursor: pointer;
+
+      &:hover {
+        background: #faf9f8;
+        color: #999;
+      }
+    }
   }
 
   &__head {

@@ -275,7 +275,7 @@ html {
 }
 
 body {
-  color: #000;
+  color: #1a1a1a;
   font-size: 10px;
   font-size: 1rem;
   font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
@@ -301,11 +301,8 @@ body {
 }
 
 a {
-  color: #000;
+  color: #1a1a1a;
   text-decoration: none;
-  transition-property: color;
-  transition-duration: 0.6s;
-  transition-timing-function: cubic-bezier(0.24, 1, 0.32, 1);
   cursor: pointer;
 }
 
@@ -325,6 +322,85 @@ img {
 /* =========================================================
  Layout
 ========================================================= */
+.l-footer {
+  margin-top: -70px;
+  margin-bottom: 95px;
+}
+
+.l-footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.l-footer__left {
+  font-size: 1.4rem;
+}
+
+.l-footer__museums {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.l-footer__museum {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+}
+
+.l-footer__museum ~ .l-footer__museum {
+  margin-top: 1em;
+}
+
+.l-footer__museum::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 300ms;
+}
+
+.l-footer__museum::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f24d";
+  font-size: 1rem;
+  margin-left: 0.3rem;
+}
+
+.l-footer__museum:hover::before {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+.l-footer__company {
+  display: flex;
+  align-items: flex-end;
+  font-family: "Heebo", sans-serif;
+}
+
+.l-footer__privacy {
+  font-weight: 500;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.l-footer__copy {
+  font-weight: 500;
+  margin-left: 4rem;
+}
+
+.l-footer__logo {
+  margin-left: 2rem;
+  width: 12rem;
+}
+
 /* =========================================================
  Object
 ========================================================= */
@@ -338,6 +414,18 @@ img {
 
 .c-panel__box {
   width: 50%;
+}
+
+.c-title {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-left: 2px solid #1a1a1a;
+}
+
+.c-container {
+  width: 76%;
+  margin: 0 auto;
 }
 
 /* ---------------------------------------------------------
@@ -371,12 +459,19 @@ img {
   height: auto;
 }
 
+.p-hashtags__label {
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+}
+
 .p-hashtags-left {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
   height: 100vh;
+  padding: 50px;
 }
 
 .p-hashtags-left__head {
@@ -384,11 +479,55 @@ img {
 }
 
 .p-hashtags-left__title {
-  width: 15%;
+  width: 10rem;
+  padding-bottom: 10px;
 }
 
 .p-hashtags-left__copy {
   font-size: 1rem;
+  transform: scale(0.6);
+  transform-origin: 0 0;
+}
+
+.p-hashtags-left__tags {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-hashtags-left__links {
+  display: flex;
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 50px;
+}
+
+.p-hashtags-left__link {
+  width: 26px;
+  height: 26px;
+}
+
+.p-hashtags-left__link > a {
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s all ease;
+}
+
+.p-hashtags-left__link > a:hover {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+.p-hashtags-left__link ~ .p-hashtags-left__link {
+  margin-left: 0.5rem;
 }
 
 .p-article {
@@ -492,6 +631,24 @@ img {
   background-image: url(../image/img_article_20.jpg);
 }
 
+.p-article__item--more {
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  color: #bebebe;
+  font-size: 1.4rem;
+  text-align: center;
+  font-family: "Heebo", sans-serif;
+  font-weight: 500;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.p-article__item--more:hover {
+  background: #faf9f8;
+  color: #999;
+}
+
 .p-article__head {
   font-family: a-otf-midashi-go-mb31-pr6n, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
   font-weight: 600;
@@ -507,6 +664,63 @@ img {
 
 .p-article__tags > * {
   padding-right: 1rem;
+}
+
+.p-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #1a1a1a;
+}
+
+.p-tags-list__item {
+  padding: 0 0.3em;
+}
+
+.p-tags-list__item::before {
+  content: "#";
+}
+
+.p-tags-list__item > a {
+  color: #1a1a1a;
+}
+
+.p-outline {
+  position: relative;
+  margin-top: 130px;
+  height: auto;
+}
+
+.p-outline__label {
+  position: absolute;
+  top: 95px;
+  left: 50px;
+}
+
+.p-outline__container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: 0;
+  font-family: a-otf-midashi-go-mb31-pr6n, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  padding-top: 95px;
+  border-top: 5px solid #1a1a1a;
+}
+
+.p-outline__head {
+  font-size: 6rem;
+  line-height: 1.2;
+}
+
+.p-outline__body {
+  font-size: 1.8rem;
+  line-height: 2;
+  margin-right: 60px;
+}
+
+.p-outline__body > a {
+  color: #bebebe;
 }
 
 /* ---------------------------------------------------------
@@ -654,11 +868,6 @@ img {
 
 .u-lt05 {
   letter-spacing: 0.05em;
-}
-
-.u-font-heebo {
-  font-family: "Heebo", sans-serif;
-  font-weight: 500;
 }
 
 .u-show-pc {

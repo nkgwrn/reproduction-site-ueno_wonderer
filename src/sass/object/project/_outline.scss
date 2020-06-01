@@ -1,0 +1,36 @@
+.p-outline {
+  position: relative;
+  margin-top: 130px;
+  height: auto;
+
+  &__label {
+    // transform: translateY(-50%);
+    position: absolute;
+    top: 95px;
+    left: 50px;
+  }
+
+  &__container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: 0;
+    font-family: $font-family-otf;
+    padding-top: 95px;
+    border-top: 5px solid $font-color;
+  }
+
+  &__head {
+    font-size: 6rem;
+    line-height: 1.2;
+  }
+
+  &__body {
+    font-size: 1.8rem;
+    line-height: 2;
+    margin-right: 60px;
+
+    > a {
+      color: #bebebe;
+    }
+  }
+}

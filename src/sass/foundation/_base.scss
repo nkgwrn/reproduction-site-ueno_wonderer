@@ -32,7 +32,7 @@ body {
 a {
   color: $font-color;
   text-decoration: none;
-  @include transition(color);
+  // @include transition(color);
   cursor: pointer;
 }
 
