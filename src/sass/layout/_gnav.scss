@@ -2,7 +2,7 @@
   width: 100%;
   height: 100vh;
   position: fixed;
-  z-index: 9;
+  z-index: 90;
   top: 0;
   left: 0;
   background-color: #ccc7c3;
@@ -28,13 +28,68 @@
     padding-left: 7rem;
   }
 
+  &__head {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 30rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #ccc7c3;
+      top: 0;
+      left: 0;
+      transition: all 0.3s 0.8s ease-out;
+      transform: translateX(0);
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+
   &__body {
     display: flex;
     margin-top: 30px;
   }
 
+  &__copy {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #ccc7c3;
+      top: 0;
+      left: 0;
+      transition: all 0.3s 0.8s ease-out;
+      transform: translateX(0);
+    }
+  }
+
   &__privacy {
     margin-left: 30px;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #ccc7c3;
+      top: 0;
+      left: 0;
+      transition: all 0.3s 0.8s ease-out;
+      transform: translateX(0);
+    }
+
     > a {
       color: #fff;
     }
@@ -42,7 +97,21 @@
 
   &__right {
     font-size: 1.4rem;
-    border-top: 5px solid #fff;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #fff;
+      transform: scaleX(0);
+      transform-origin: left bottom;
+      transition: all 0.5s 0.8s ease-out;
+    }
   }
 
   &__box {
@@ -82,6 +151,18 @@
         transform-origin: left center;
       }
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #ccc7c3;
+      top: 0;
+      left: 0;
+      transition: all 0.3s 0.8s ease-out;
+      transform: translateX(0);
+    }
   }
 
   &__links {
@@ -89,6 +170,8 @@
     justify-content: flex-end;
     margin-right: 8rem;
     margin-top: 60px;
+    transition: all 0.3s 0.8s ease-out;
+    opacity: 0;
   }
 
   &__link {
@@ -114,6 +197,36 @@
 
     & ~ & {
       margin-left: 0.5rem;
+    }
+  }
+
+  &.is-open {
+    transform: translateX(0);
+
+    .l-gnav {
+      &__head {
+        &::after {
+          transform: translateX(100%);
+        }
+      }
+
+      &__right {
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+
+      &__item,
+      &__copy,
+      &__privacy {
+        &::after {
+          transform: translateX(100%);
+        }
+      }
+
+      &__links {
+        opacity: 1;
+      }
     }
   }
 }

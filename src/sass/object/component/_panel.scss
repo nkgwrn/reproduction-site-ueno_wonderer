@@ -2,7 +2,15 @@
   display: flex;
   height: 100vh;
 
+  @include mqSm {
+    flex-wrap: wrap;
+  }
+
   &__box {
     width: 50%;
+
+    @include mqSm {
+      width: 100%;
+    }
   }
 }

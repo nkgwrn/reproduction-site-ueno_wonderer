@@ -3,6 +3,10 @@
   margin-top: 130px;
   height: auto;
 
+  @include mqSm {
+    margin-top: 60px;
+  }
+
   &__label {
     // transform: translateY(-50%);
     position: absolute;
@@ -22,12 +26,21 @@
   &__head {
     font-size: 6rem;
     line-height: 1.2;
+
+    @include mqSm {
+      font-size: 4rem;
+    }
   }
 
   &__body {
     font-size: 1.8rem;
     line-height: 2;
     margin-right: 60px;
+
+    @include mqSm {
+      font-size: 1.2rem;
+      margin-right: 20px;
+    }
 
     > a {
       color: #bebebe;

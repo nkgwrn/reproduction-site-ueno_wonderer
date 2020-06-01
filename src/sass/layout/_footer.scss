@@ -1,15 +1,28 @@
 .l-footer {
   margin-top: -70px;
   margin-bottom: 95px;
+  position: relative;
+
+  @include mqSm {
+    margin-top: 50px;
+  }
 
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include mqSm {
+      display: block;
+    }
   }
 
   &__left {
     font-size: 1.4rem;
+
+    @include mqSm {
+      font-size: 1rem;
+    }
   }
 
   &__museums {
@@ -26,6 +39,10 @@
 
     & ~ & {
       margin-top: 1em;
+
+      @include mqSm {
+        margin-top: 2em;
+      }
     }
 
     &::before {
@@ -75,5 +92,47 @@
   &__logo {
     margin-left: 2rem;
     width: 12rem;
+  }
+
+  &__bg {
+    width: 100%;
+    height: 240px;
+    z-index: -1;
+    position: absolute;
+    bottom: 300px;
+    background: url(../image/img_footer_bg.png) repeat-x;
+    background-position: 0 0;
+    -webkit-animation: bgroop 30s linear infinite;
+    animation: bgroop 30s linear infinite;
+  }
+
+  &__bgtext {
+    position: absolute;
+    transform: rotate(270deg);
+    bottom: 100px;
+    left: 45%;
+    color: #f7f7f7;
+  }
+
+  &__bghead {
+    font-size: 2.9rem;
+    margin-bottom: 10px;
+  }
+}
+
+@-webkit-keyframes bgroop {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1956px 0;
+  }
+}
+@keyframes bgroop {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1956px 0;
   }
 }

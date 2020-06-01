@@ -14,6 +14,10 @@
     height: 100vh;
     padding: 50px;
 
+    @include mqSm {
+      display: none;
+    }
+
     &__head {
       display: block;
     }

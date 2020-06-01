@@ -2,6 +2,11 @@
   &-left {
     background-color: rgb(242, 240, 237);
     position: relative;
+
+    @include mqSm {
+      order: 2;
+      height: 50vh;
+    }
   }
 
   &-right {
@@ -10,18 +15,38 @@
     padding: 0 70px 80px;
     align-items: flex-end;
 
+    @include mqSm {
+      order: 1;
+      height: 50vh;
+      padding: 30px 35px;
+    }
+
     &__head,
     &__lead {
       width: 50%;
     }
 
+    &__head {
+      @include mqSm {
+        width: 65%;
+      }
+    }
+
     &__lead {
       font-size: 1.2rem;
       line-height: 1.9;
+
+      @include mqSm {
+        display: none;
+      }
     }
 
     &__title {
       margin-bottom: 30px;
+
+      @include mqSm {
+        margin-bottom: 10px;
+      }
     }
   }
 }

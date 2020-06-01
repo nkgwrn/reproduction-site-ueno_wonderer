@@ -50,6 +50,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.0/css/swiper.min.css"
   />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.0/js/swiper.min.js"></script>
   <script src="./js/index.js" defer></script>
@@ -63,27 +64,28 @@
       <li><a href="">EN</a></li>
     </ul>
     <!-- <span class="l-header__menu">MENU</span> -->
-    <div class="cp_arrows">
-      <a class="link cp_arrow" href="#">
-        <svg
-          class="arrow_icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="62"
-          height="62"
-          viewbox="-2 -2 66 66"
+  </div>
+  <div class="cp_arrows">
+    <p class="link cp_arrow">
+      <svg
+        class="arrow_icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="62"
+        height="62"
+        viewbox="-2 -2 66 66"
+        id="js-btn"
+      >
+        <g
+          fill="none"
+          stroke="#1a1a1a"
+          stroke-width="1.5"
+          stroke-linejoin="round"
+          stroke-miterlimit="10"
         >
-          <g
-            fill="none"
-            stroke="#1a1a1a"
-            stroke-width="1.5"
-            stroke-linejoin="round"
-            stroke-miterlimit="10"
-          >
-            <circle class="arrow_icon_circle" cx="31" cy="31" r="31.5"></circle>
-          </g>
-        </svg>
-      </a>
-    </div>
+          <circle class="arrow_icon_circle" cx="31" cy="31" r="31.5"></circle>
+        </g>
+      </svg>
+    </p>
   </div>
 </header>
 <!-- /.l-header -->
@@ -91,7 +93,7 @@
   <div class="l-gnav__inner">
     <div class="l-gnav__left">
       <a href="" class="l-gnav__head"
-        ><img src="image/img_logo.svg" alt=""
+        ><img src="image/img_logo_white.png" alt=""
       /></a>
       <ul class="l-gnav__body">
         <li class="l-gnav__copy">Copyright &copy;Tokyo-Ueno Wonderer</li>
@@ -676,8 +678,18 @@
           </li>
         </ul>
       </div>
+      <div class="l-footer__bgtext u-font-heebo">
+        <div class="l-footer__bghead">Tokyo Ueno Wonderer</div>
+        <div class="l-footer__bgbody">
+          Ueno Art Journal A city guide to understand Ueno's “now”.<br />
+          Museums,bt workers, cafes, bars, Hotels, shops, galleries, etc.
+          <br />Hot spots and recommended events now <br />Carefully selected
+          and introduced
+        </div>
+      </div>
     </div>
   </div>
+  <div class="l-footer__bg"></div>
 </footer>
 <!-- /.l-footer -->
 

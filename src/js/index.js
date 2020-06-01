@@ -1,19 +1,23 @@
 var mySwiper = new Swiper(".swiper-container", {
-  // Optional parameters
   loop: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
-
-  // If we need pagination
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
   },
+});
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+$(function () {
+  console.log("こんにちは！");
+  $(".cp_arrow").on("click", function () {
+    $(".l-gnav").toggleClass("is-open");
+    // if ($(".l-gnav").hasClass("is-open")) {
+    //   $(".l-header__lang").css("display", "none");
+    // } else {
+    //   $(".l-header__lang").css("display", "flex");
+    // }
+    console.log("こんにちは！");
+  });
 });

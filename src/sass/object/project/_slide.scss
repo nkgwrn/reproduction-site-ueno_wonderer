@@ -23,6 +23,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+    @include mqSm {
+      width: 100%;
+      height: 100%;
+    }
+
     &:before {
       content: "";
       display: block;
@@ -31,6 +36,10 @@
       background-repeat: no-repeat;
       background-position: center;
       transition: transform 0.3s ease;
+
+      @include mqSm {
+        padding: 100%;
+      }
     }
 
     &--01 {
@@ -79,11 +88,13 @@
   &__ttl {
     color: #999;
 
-    // &--cover {
-    //   position: absolute;
-    //   left: 0;
-    //   top: 0em;
-    // }
+    &--cover {
+      position: absolute;
+      left: 0;
+      top: 0em;
+      transform: scale(0);
+      transition: 0.5s all ease;
+    }
   }
 
   &__body {

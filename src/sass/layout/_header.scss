@@ -1,13 +1,12 @@
 .l-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  font-size: 1.2rem;
-
   &__inner {
     display: flex;
-    padding: 30px;
     align-items: baseline;
+    position: fixed;
+    top: 45px;
+    right: 75px;
+    font-size: 1.2rem;
+    z-index: 10;
   }
 
   &__lang {
@@ -57,27 +56,30 @@
   box-sizing: border-box;
 }
 .cp_arrows {
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 99;
+  right: 30px;
+  top: 20px;
 }
 .cp_arrows .link {
   cursor: pointer;
   text-decoration: none;
 }
 .cp_arrows .cp_arrow {
-  line-height: 2rem;
+  // line-height: 2rem;
   display: inline-block;
-  height: 2rem;
+  // height: 2rem;
   position: relative;
 
   &::before {
     content: "MENU";
     position: absolute;
-    top: 90%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
   }
 }
 .cp_arrows .cp_arrow .arrow_icon {
