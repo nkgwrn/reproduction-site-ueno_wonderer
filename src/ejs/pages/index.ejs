@@ -2,10 +2,81 @@
 <html lang="ja">
   <%- include('../components/_head'); %>
   <body id="wrapper">
-    <%- include('../components/_header'); %>
+    <%- include('../components/_header'); %> <%- include('../components/_gnav');
+    %>
     <main class="l-main">
       <section class="c-panel p-mv">
-        <div class="c-panel__box p-mv-left"></div>
+        <div class="c-panel__box p-mv-left">
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Slider main container -->
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <a href="" class="p-slide__item">
+                  <div class="p-slide__image p-slide__image--01">
+                    <!-- <img src="image/img_article_06.jpg" alt="" /> -->
+                  </div>
+                  <div class="p-slide__text">
+                    <div class="p-slide__label">FEATURE</div>
+                    <div class="p-slide__head">
+                      <span class="p-slide__ttl"
+                        >子どもの本の図書館が案内する、アートの魅力</span
+                      >
+                      <span class="p-slide__ttl--cover"
+                        >子どもの本の図書館が案内する、アートの魅力</span
+                      >
+                    </div>
+                    <ul class="p-slide__body">
+                      <li>tags</li>
+                      <li>tags</li>
+                      <li>tags</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="p-slide__item">
+                  <div class="p-slide__image p-slide__image--02">
+                    <!-- <img src="image/img_article_13.jpg" alt="" /> -->
+                  </div>
+                  <div class="p-slide__text">
+                    <div class="p-slide__head">
+                      <span>谷中の「七福猫」を探せ！</span>
+                      <span>谷中の「七福猫」を探せ！</span>
+                    </div>
+                    <ul class="p-slide__body">
+                      <li>tags</li>
+                      <li>tags</li>
+                      <li>tags</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="p-slide__item">
+                  <div class="p-slide__image p-slide__image--03">
+                    <!-- <img src="image/img_article_11.jpg" alt="" /> -->
+                  </div>
+                  <div class="p-slide__text">
+                    <div class="p-slide__head">
+                      <span>上野の文化を支える人たち、紹介します</span>
+                      <span>上野の文化を支える人たち、紹介します</span>
+                    </div>
+                    <ul class="p-slide__body">
+                      <li>tags</li>
+                      <li>tags</li>
+                      <li>tags</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="c-panel__box p-mv-right">
           <div class="p-mv-right__head">
             <h1 class="p-mv-right__title">
@@ -15,7 +86,7 @@
                 class="p-mv-right__img"
               />
             </h1>
-            <p class="u-font-heebo">
+            <p class="u-font-heebo p-mv-right__copy">
               Copyright &copy;Tokyo-Ueno Wonderer
             </p>
           </div>
@@ -31,7 +102,9 @@
       <section class="c-panel p-hashtags">
         <div class="c-panel__box p-hashtags-left">
           <div class="p-hashtags__label">
-            <div class="c-title p-hashtags-left__heading u-vertical">
+            <div
+              class="c-title p-hashtags-left__heading u-vertical u-font-heebo"
+            >
               Hashtags
             </div>
           </div>
@@ -431,7 +504,9 @@
       </section>
       <section class="c-panel p-outline">
         <div class="p-outline__label">
-          <div class="c-title p-hashtags-left__heading u-vertical">Outline</div>
+          <div class="c-title p-hashtags-left__heading u-vertical u-font-heebo">
+            Outline
+          </div>
         </div>
         <div class="c-container">
           <div class="p-outline__container u-vertical">
@@ -449,4 +524,10 @@
     <!-- /.l-main -->
     <%- include('../components/_footer'); %>
   </body>
+  <style>
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </html>

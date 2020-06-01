@@ -52,59 +52,148 @@
   />
   <link rel="stylesheet" href="./css/style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.0/js/swiper.min.js"></script>
-  <!-- <script src="./js/index.js" defer></script> -->
+  <script src="./js/index.js" defer></script>
 </head>
 
   <body id="wrapper">
-    <header class="l-header">
-  <!-- <a href="" class="l-header-logo"
-    ><img src="image/img_nature.png" alt="" class="l-header-logo__img"
-  /></a>
-  <nav class="l-header-nav" id="js-headNav">
-    <ul class="l-nav" id="js-nav">
-      <li class="l-nav__item">
-        <a href="" class="l-nav__item__link"
-          ><span class="u-m1c u-show-pc">Nature Remo</span
-          ><span class="u-m1c u-show-md u-black">NATURE REMO</span></a
-        >
-      </li>
-      <li class="l-nav__item">
-        <a href="" class="l-nav__item__link"
-          ><span class="u-m1c u-show-pc">Nature Remo E</span
-          ><span class="u-m1c u-show-md u-black">NATURE REMO E</span></a
-        >
-      </li>
-      <li class="l-nav__item">
-        <a href="" class="l-nav__item__link">ミッション</a>
-      </li>
-      <li class="l-nav__item">
-        <a href="" class="l-nav__item__link">ブログ</a>
-      </li>
-      <li class="l-nav__item">
-        <a href="" class="l-nav__item__link">お知らせ</a>
-      </li>
-      <li class="l-nav__item">
-        <a href="" class="l-nav__item__link">ヘルプセンター</a>
-      </li>
-      <li class="l-nav__item">
-        <a href="" class="l-nav__item__link"
-          ><span class="u-m1c u-show-pc">English</span
-          ><span class="u-m1c u-show-md u-black">ENGLISH</span></a
-        >
-      </li>
+    <header class="l-header u-font-heebo">
+  <div class="l-header__inner">
+    <ul class="l-header__lang">
+      <li><a href="">JP</a></li>
+      <li><a href="">EN</a></li>
     </ul>
-  </nav>
-  <div class="l-header-toggle" id="js-toggle">
-    <span class="l-header-toggle__item l-header-toggle__item--top"></span>
-    <span class="l-header-toggle__item l-header-toggle__item--center"></span>
-    <span class="l-header-toggle__item l-header-toggle__item--bottom"></span>
-  </div> -->
+    <!-- <span class="l-header__menu">MENU</span> -->
+    <div class="cp_arrows">
+      <a class="link cp_arrow" href="#">
+        <svg
+          class="arrow_icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="62"
+          height="62"
+          viewbox="-2 -2 66 66"
+        >
+          <g
+            fill="none"
+            stroke="#1a1a1a"
+            stroke-width="1.5"
+            stroke-linejoin="round"
+            stroke-miterlimit="10"
+          >
+            <circle class="arrow_icon_circle" cx="31" cy="31" r="31.5"></circle>
+          </g>
+        </svg>
+      </a>
+    </div>
+  </div>
 </header>
 <!-- /.l-header -->
+ <div class="l-gnav">
+  <div class="l-gnav__inner">
+    <div class="l-gnav__left">
+      <a href="" class="l-gnav__head"
+        ><img src="image/img_logo.svg" alt=""
+      /></a>
+      <ul class="l-gnav__body">
+        <li class="l-gnav__copy">Copyright &copy;Tokyo-Ueno Wonderer</li>
+        <li class="l-gnav__privacy"><a href="">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="l-gnav__right">
+      <nav class="l-gnav__nav">
+        <ul class="l-gnav__box">
+          <li class="l-gnav__item"><a href="">Top</a></li>
+          <li class="l-gnav__item"><a href="">About us</a></li>
+          <li class="l-gnav__item"><a href="">Contact</a></li>
+        </ul>
+      </nav>
+      <ul class="l-gnav__links">
+        <li class="l-gnav__link">
+          <a href=""><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="l-gnav__link">
+          <a href=""><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="l-gnav__link">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
     <main class="l-main">
       <section class="c-panel p-mv">
-        <div class="c-panel__box p-mv-left"></div>
+        <div class="c-panel__box p-mv-left">
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Slider main container -->
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <a href="" class="p-slide__item">
+                  <div class="p-slide__image p-slide__image--01">
+                    <!-- <img src="image/img_article_06.jpg" alt="" /> -->
+                  </div>
+                  <div class="p-slide__text">
+                    <div class="p-slide__label">FEATURE</div>
+                    <div class="p-slide__head">
+                      <span class="p-slide__ttl"
+                        >子どもの本の図書館が案内する、アートの魅力</span
+                      >
+                      <span class="p-slide__ttl--cover"
+                        >子どもの本の図書館が案内する、アートの魅力</span
+                      >
+                    </div>
+                    <ul class="p-slide__body">
+                      <li>tags</li>
+                      <li>tags</li>
+                      <li>tags</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="p-slide__item">
+                  <div class="p-slide__image p-slide__image--02">
+                    <!-- <img src="image/img_article_13.jpg" alt="" /> -->
+                  </div>
+                  <div class="p-slide__text">
+                    <div class="p-slide__head">
+                      <span>谷中の「七福猫」を探せ！</span>
+                      <span>谷中の「七福猫」を探せ！</span>
+                    </div>
+                    <ul class="p-slide__body">
+                      <li>tags</li>
+                      <li>tags</li>
+                      <li>tags</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="p-slide__item">
+                  <div class="p-slide__image p-slide__image--03">
+                    <!-- <img src="image/img_article_11.jpg" alt="" /> -->
+                  </div>
+                  <div class="p-slide__text">
+                    <div class="p-slide__head">
+                      <span>上野の文化を支える人たち、紹介します</span>
+                      <span>上野の文化を支える人たち、紹介します</span>
+                    </div>
+                    <ul class="p-slide__body">
+                      <li>tags</li>
+                      <li>tags</li>
+                      <li>tags</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="c-panel__box p-mv-right">
           <div class="p-mv-right__head">
             <h1 class="p-mv-right__title">
@@ -114,7 +203,7 @@
                 class="p-mv-right__img"
               />
             </h1>
-            <p class="u-font-heebo">
+            <p class="u-font-heebo p-mv-right__copy">
               Copyright &copy;Tokyo-Ueno Wonderer
             </p>
           </div>
@@ -130,7 +219,9 @@
       <section class="c-panel p-hashtags">
         <div class="c-panel__box p-hashtags-left">
           <div class="p-hashtags__label">
-            <div class="c-title p-hashtags-left__heading u-vertical">
+            <div
+              class="c-title p-hashtags-left__heading u-vertical u-font-heebo"
+            >
               Hashtags
             </div>
           </div>
@@ -530,7 +621,9 @@
       </section>
       <section class="c-panel p-outline">
         <div class="p-outline__label">
-          <div class="c-title p-hashtags-left__heading u-vertical">Outline</div>
+          <div class="c-title p-hashtags-left__heading u-vertical u-font-heebo">
+            Outline
+          </div>
         </div>
         <div class="c-container">
           <div class="p-outline__container u-vertical">
@@ -571,7 +664,7 @@
         </ul>
       </div>
       <div class="l-footer__right">
-        <ul class="l-footer__company">
+        <ul class="l-footer__company u-font-heebo">
           <li class="l-footer__privacy"><a href="">Privacy Policy</a></li>
           <li class="l-footer__copy">
             <small>Copyright &copy;Tokyo-Ueno Wonderer</small>
@@ -589,4 +682,10 @@
 <!-- /.l-footer -->
 
   </body>
+  <style>
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </html>
