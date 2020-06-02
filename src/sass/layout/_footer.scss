@@ -5,6 +5,7 @@
 
   @include mqSm {
     margin-top: 50px;
+    line-height: 1.2;
   }
 
   &__container {
@@ -81,12 +82,19 @@
 
   &__privacy {
     font-weight: 500;
-    border-bottom: 1px solid $font-color;
+
+    > a {
+      border-bottom: 1px solid $font-color;
+    }
   }
 
   &__copy {
     font-weight: 500;
     margin-left: 4rem;
+
+    @include mqSm {
+      margin-left: 1rem;
+    }
   }
 
   &__logo {
@@ -102,8 +110,13 @@
     bottom: 300px;
     background: url(../image/img_footer_bg.png) repeat-x;
     background-position: 0 0;
-    -webkit-animation: bgroop 30s linear infinite;
-    animation: bgroop 30s linear infinite;
+    -webkit-animation: bgroop 50s linear infinite;
+    animation: bgroop 50s linear infinite;
+
+    @include mqSm {
+      bottom: 400px;
+      background-size: 400%;
+    }
   }
 
   &__bgtext {
@@ -112,11 +125,22 @@
     bottom: 100px;
     left: 45%;
     color: #f7f7f7;
+    z-index: -1;
+
+    @include mqSm {
+      width: 100%;
+      bottom: 300px;
+      left: 25%;
+    }
   }
 
   &__bghead {
     font-size: 2.9rem;
     margin-bottom: 10px;
+
+    @include mqSm {
+      font-size: 2.2rem;
+    }
   }
 }
 

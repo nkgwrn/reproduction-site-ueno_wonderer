@@ -63,40 +63,65 @@
   z-index: 99;
   right: 30px;
   top: 20px;
-}
-.cp_arrows .link {
-  cursor: pointer;
-  text-decoration: none;
-}
-.cp_arrows .cp_arrow {
-  // line-height: 2rem;
-  display: inline-block;
-  // height: 2rem;
-  position: relative;
 
-  &::before {
-    content: "MENU";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .link {
+    cursor: pointer;
+    text-decoration: none;
   }
-}
-.cp_arrows .cp_arrow .arrow_icon {
-  position: relative;
-  top: -1px;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  vertical-align: middle;
-}
-.cp_arrows .cp_arrow .arrow_icon_circle {
-  -webkit-transition: stroke-dashoffset 0.3s ease;
-  transition: stroke-dashoffset 0.3s ease;
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-}
-.cp_arrows .cp_arrow:hover .arrow_icon_circle {
-  stroke-dashoffset: 0;
+
+  .cp_arrow {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: "MENU";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      .arrow_icon_circle {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    &.is-active {
+      background: #fff;
+      border-radius: 50%;
+
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f00d";
+        font-weight: 700;
+        font-size: 3rem;
+        color: #ccc7c3;
+      }
+
+      &:hover {
+        .arrow_icon_circle {
+          display: none;
+        }
+      }
+    }
+
+    .arrow_icon {
+      position: relative;
+      top: -1px;
+      -webkit-transition: -webkit-transform 0.3s ease;
+      transition: -webkit-transform 0.3s ease;
+      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+      vertical-align: middle;
+    }
+
+    .arrow_icon_circle {
+      -webkit-transition: stroke-dashoffset 0.3s ease;
+      transition: stroke-dashoffset 0.3s ease;
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+    }
+  }
 }

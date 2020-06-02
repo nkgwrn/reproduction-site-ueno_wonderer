@@ -1,4 +1,9 @@
 .p-mv {
+  @include mqSm {
+    position: relative;
+    margin-bottom: 370px;
+  }
+
   &-left {
     background-color: rgb(242, 240, 237);
     position: relative;
@@ -37,7 +42,15 @@
       line-height: 1.9;
 
       @include mqSm {
-        display: none;
+        text-align: center !important;
+        writing-mode: horizontal-tb !important;
+        position: absolute;
+        width: 80%;
+        bottom: -250px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: $font-family-otf;
+        font-size: 1.3rem;
       }
     }
 

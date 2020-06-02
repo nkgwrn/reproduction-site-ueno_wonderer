@@ -8,10 +8,14 @@
   }
 
   &__label {
-    // transform: translateY(-50%);
     position: absolute;
     top: 95px;
     left: 50px;
+
+    @include mqSm {
+      left: 15px;
+      top: 50px;
+    }
   }
 
   &__container {
@@ -21,6 +25,12 @@
     font-family: $font-family-otf;
     padding-top: 95px;
     border-top: 5px solid $font-color;
+
+    @include mqSm {
+      width: 85%;
+      border-top-width: 4px;
+      padding-top: 50px;
+    }
   }
 
   &__head {
