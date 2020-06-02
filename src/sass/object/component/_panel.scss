@@ -2,14 +2,14 @@
   display: flex;
   height: 100vh;
 
-  @include mqSm {
+  @include mqMd {
     flex-wrap: wrap;
   }
 
   &__box {
     width: 50%;
 
-    @include mqSm {
+    @include mqMd {
       width: 100%;
     }
   }

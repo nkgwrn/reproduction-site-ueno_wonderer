@@ -14,7 +14,7 @@
     height: 100vh;
     padding: 50px;
 
-    @include mqSm {
+    @include mqMd {
       display: none;
     }
 

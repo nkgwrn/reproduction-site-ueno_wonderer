@@ -2,8 +2,12 @@
   display: flex;
   flex-wrap: wrap;
 
-  @include mqSm {
+  @include mqMd {
     margin: 0 auto;
+    width: 310px;
+  }
+
+  @include mqSm {
     width: 250px;
   }
 
@@ -13,8 +17,12 @@
     background-size: cover;
     height: 32.5vw;
 
-    @include mqSm {
+    @include mqMd {
       width: 100%;
+      height: 410px;
+    }
+
+    @include mqSm {
       height: 330px;
     }
 
@@ -26,7 +34,7 @@
       justify-content: flex-end;
       color: $link-color-article;
 
-      @include mqSm {
+      @include mqMd {
         padding: 1rem;
       }
     }
@@ -103,7 +111,7 @@
       transition: all 0.5s ease;
       cursor: pointer;
 
-      @include mqSm {
+      @include mqMd {
         padding: 60px 0;
         font-size: 1.2rem;
       }

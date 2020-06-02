@@ -1,4 +1,8 @@
 .p-mv {
+  @include mqMd {
+    position: relative;
+    margin-bottom: 470px;
+  }
   @include mqSm {
     position: relative;
     margin-bottom: 370px;
@@ -8,7 +12,7 @@
     background-color: rgb(242, 240, 237);
     position: relative;
 
-    @include mqSm {
+    @include mqMd {
       order: 2;
       height: 50vh;
     }
@@ -20,7 +24,7 @@
     padding: 0 70px 80px;
     align-items: flex-end;
 
-    @include mqSm {
+    @include mqMd {
       order: 1;
       height: 50vh;
       padding: 30px 35px;
@@ -32,7 +36,7 @@
     }
 
     &__head {
-      @include mqSm {
+      @include mqMd {
         width: 65%;
       }
     }
@@ -41,16 +45,21 @@
       font-size: 1.2rem;
       line-height: 1.9;
 
-      @include mqSm {
+      @include mqMd {
+        font-size: 1.6rem;
         text-align: center !important;
         writing-mode: horizontal-tb !important;
         position: absolute;
         width: 80%;
-        bottom: -250px;
+        bottom: -350px;
         left: 50%;
         transform: translateX(-50%);
         font-family: $font-family-otf;
+      }
+
+      @include mqSm {
         font-size: 1.3rem;
+        bottom: -270px;
       }
     }
 
@@ -80,7 +89,7 @@
         }
       }
 
-      @include mqSm {
+      @include mqMd {
         margin-bottom: 10px;
       }
     }

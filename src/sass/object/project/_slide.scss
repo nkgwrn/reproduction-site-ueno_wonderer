@@ -23,7 +23,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    @include mqSm {
+    @include mqMd {
       width: 100%;
       height: 100%;
     }
@@ -38,7 +38,7 @@
       background-position: center;
       transition: transform 0.3s ease;
 
-      @include mqSm {
+      @include mqMd {
         padding-top: 100%;
       }
     }
@@ -101,7 +101,7 @@
     bottom: 5%;
     width: 90%;
 
-    @include mqSm {
+    @include mqMd {
       bottom: 15%;
     }
   }
@@ -113,7 +113,7 @@
     transition: 1s all ease;
     transition-delay: 1s;
 
-    @include mqSm {
+    @include mqMd {
       color: #fff;
     }
   }
@@ -134,7 +134,7 @@
     clip-path: inset(0 100% 0 0);
     display: inline-block;
 
-    @include mqSm {
+    @include mqMd {
       color: #fff;
     }
 
@@ -160,7 +160,7 @@
     transition: 1s all ease;
     transition-delay: 1s;
 
-    @include mqSm {
+    @include mqMd {
       font-size: 1rem;
     }
 
@@ -168,7 +168,7 @@
       display: inline;
       color: #999;
 
-      @include mqSm {
+      @include mqMd {
         color: #fff;
       }
 
@@ -185,7 +185,7 @@
   right: 5%;
   text-align: right;
 
-  @include mqSm {
+  @include mqMd {
     bottom: 5%;
     top: unset;
   }

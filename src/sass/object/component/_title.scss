@@ -3,7 +3,7 @@
   font-weight: 700;
   border-left: 2px solid $font-color;
 
-  @include mqSm {
+  @include mqMd {
     font-size: 1.2rem;
   }
 }

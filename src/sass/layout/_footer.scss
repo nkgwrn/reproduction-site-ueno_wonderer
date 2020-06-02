@@ -3,9 +3,15 @@
   margin-bottom: 95px;
   position: relative;
 
+  @include mqMd {
+    margin-top: 70px;
+    margin-bottom: 120px;
+    line-height: 1.2;
+  }
+
   @include mqSm {
     margin-top: 50px;
-    line-height: 1.2;
+    margin-bottom: 95px;
   }
 
   &__container {
@@ -13,13 +19,18 @@
     justify-content: space-between;
     align-items: flex-end;
 
-    @include mqSm {
+    @include mqMd {
       display: block;
     }
   }
 
   &__left {
     font-size: 1.4rem;
+
+    @include mqMd {
+      font-size: 1.3rem;
+      padding-left: 4%;
+    }
 
     @include mqSm {
       font-size: 1rem;
@@ -40,6 +51,10 @@
 
     & ~ & {
       margin-top: 1em;
+
+      @include mqMd {
+        margin-top: 1.5em;
+      }
 
       @include mqSm {
         margin-top: 2em;
@@ -75,13 +90,39 @@
     }
   }
 
+  &__right {
+    @include mqMd {
+      margin-top: 20px;
+      position: relative;
+    }
+  }
+
   &__company {
     display: flex;
     align-items: flex-end;
+
+    @include mqMd {
+      justify-content: flex-end;
+      margin-right: 20px;
+    }
+
+    @include mqSm {
+      justify-content: space-between;
+      margin-right: 0;
+    }
   }
 
   &__privacy {
     font-weight: 500;
+
+    @include mqMd {
+      position: absolute;
+      left: 20px;
+    }
+
+    @include mqSm {
+      position: static;
+    }
 
     > a {
       border-bottom: 1px solid $font-color;
@@ -92,7 +133,7 @@
     font-weight: 500;
     margin-left: 4rem;
 
-    @include mqSm {
+    @include mqMd {
       margin-left: 1rem;
     }
   }
@@ -113,6 +154,11 @@
     -webkit-animation: bgroop 50s linear infinite;
     animation: bgroop 50s linear infinite;
 
+    @include mqMd {
+      bottom: 520px;
+      background-size: 250%;
+    }
+
     @include mqSm {
       bottom: 400px;
       background-size: 400%;
@@ -127,8 +173,13 @@
     color: #f7f7f7;
     z-index: -1;
 
-    @include mqSm {
+    @include mqMd {
       width: 100%;
+      bottom: 620px;
+      left: 40%;
+    }
+
+    @include mqSm {
       bottom: 300px;
       left: 25%;
     }
@@ -138,7 +189,7 @@
     font-size: 2.9rem;
     margin-bottom: 10px;
 
-    @include mqSm {
+    @include mqMd {
       font-size: 2.2rem;
     }
   }

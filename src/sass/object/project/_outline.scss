@@ -26,16 +26,27 @@
     padding-top: 95px;
     border-top: 5px solid $font-color;
 
+    @include mqMd {
+      width: 55%;
+      padding-top: 60px;
+      padding-right: 40px;
+    }
+
     @include mqSm {
       width: 85%;
       border-top-width: 4px;
       padding-top: 50px;
+      // padding-right: 0px;
     }
   }
 
   &__head {
     font-size: 6rem;
     line-height: 1.2;
+
+    @include mqMd {
+      font-size: 5rem;
+    }
 
     @include mqSm {
       font-size: 4rem;
@@ -46,6 +57,11 @@
     font-size: 1.8rem;
     line-height: 2;
     margin-right: 60px;
+
+    @include mqMd {
+      font-size: 1.5rem;
+      margin-right: 40px;
+    }
 
     @include mqSm {
       font-size: 1.2rem;
