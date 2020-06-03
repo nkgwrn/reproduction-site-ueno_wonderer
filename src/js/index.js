@@ -56,8 +56,7 @@ var timer,
   limitMs = 0,
   restMs = 0,
   resolutionMs = 50 /* NOTE: Too small value does not work on IE11. */,
-  maxBar;
-maxBar = 1000;
+  maxBar = 1000;
 
 function countdown() {
   restMs -= resolutionMs;
@@ -67,7 +66,6 @@ function countdown() {
   var barNum = Math.floor((restBarLength / maxBar) * 10000);
   var barWidth = barNum / 100;
 
-  $("#bar").attr("data-per", barWidth);
   $("#bar").css("width", barWidth + "%");
 
   if (restMs < 0) {
@@ -78,15 +76,5 @@ function countdown() {
 function resetTimer() {
   clearInterval(timer);
   limitMs = restMs = 7000;
-  $("#bar").attr("data-per", 0);
   $("#bar").css("width", 0);
 }
-
-$(function () {
-  maxBar = 1000;
-
-  $("#start").on("click", function () {
-    resetTimer();
-    timer = setInterval("countdown()", resolutionMs);
-  });
-});
