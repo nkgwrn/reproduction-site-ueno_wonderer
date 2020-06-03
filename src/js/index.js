@@ -17,15 +17,76 @@ $(window).on("load", function () {
             el: ".swiper-pagination",
             clickable: true,
           },
+          on: {
+            slideChange: function () {
+              // $(".swiper-slide").data("swiper-autoplay", "6000");
+              resetTimer();
+              timer = setInterval("countdown()", resolutionMs);
+            },
+          },
         });
+        // resetTimer();
+        clearInterval(timer);
+        limitMs = restMs = 6000;
+        timer = setInterval("countdown()", resolutionMs);
       }, 0);
     }, 500);
   }, 500);
+});
+
+$(window).scroll(function () {
+  $(".js-fadein").each(function () {
+    var elemPos = $(this).offset().top,
+      scroll = $(window).scrollTop(),
+      windowHeight = $(window).height();
+    if (scroll > elemPos - windowHeight + 100) {
+      $(this).addClass("is-show");
+    }
+  });
 });
 
 $(function () {
   $(".cp_arrow").on("click", function () {
     $(this).toggleClass("is-active");
     $(".l-gnav").toggleClass("is-open");
+  });
+});
+
+var timer,
+  limitMs = 0,
+  restMs = 0,
+  resolutionMs = 50 /* NOTE: Too small value does not work on IE11. */,
+  maxBar;
+maxBar = 1000;
+
+function countdown() {
+  restMs -= resolutionMs;
+
+  var restRate = (limitMs - restMs) / limitMs;
+  var restBarLength = maxBar * restRate;
+  var barNum = Math.floor((restBarLength / maxBar) * 10000);
+  var barWidth = barNum / 100;
+
+  $("#bar").attr("data-per", barWidth);
+  $("#bar").css("width", barWidth + "%");
+
+  if (restMs < 0) {
+    resetTimer();
+  }
+}
+
+function resetTimer() {
+  clearInterval(timer);
+  limitMs = restMs = 7000;
+  $("#bar").attr("data-per", 0);
+  $("#bar").css("width", 0);
+}
+
+$(function () {
+  maxBar = 1000;
+
+  $("#start").on("click", function () {
+    resetTimer();
+    timer = setInterval("countdown()", resolutionMs);
   });
 });

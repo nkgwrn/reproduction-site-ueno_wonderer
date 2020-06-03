@@ -8,6 +8,21 @@
     margin-bottom: 370px;
   }
 
+  &__top {
+    display: flex;
+    position: absolute;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    align-items: center;
+    z-index: 5;
+
+    @include mqMd {
+      top: unset;
+      bottom: 3%;
+    }
+  }
+
   &-left {
     background-color: rgb(242, 240, 237);
     position: relative;

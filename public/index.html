@@ -127,14 +127,14 @@
     <main class="l-main">
       <section class="c-panel p-mv">
         <div class="c-panel__box p-mv-left">
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- Slider main container -->
+          <div class="p-mv__top">
+            <div class="p-progress">
+              <div id="bar" data-per="0" class="p-progress__inner"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
           <div class="swiper-container">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-              <!-- Slides -->
               <div class="swiper-slide">
                 <a href="" class="p-slide__item">
                   <div class="p-slide__image p-slide__image--01"></div>
@@ -394,7 +394,7 @@
           </div>
         </div>
         <div class="c-panel__box p-hashtags-right p-article">
-          <article class="p-article__item p-article__item--01">
+          <article class="p-article__item p-article__item--01 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 葵の御紋も見つかる!? 上野の“江戸”が香る場所へ
@@ -421,7 +421,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--02">
+          <article class="p-article__item p-article__item--02 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 大人だけじゃもったいない！ 子どもと一緒に楽しむ上野
@@ -433,7 +433,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--03">
+          <article class="p-article__item p-article__item--03 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 大人だけじゃもったいない！ 子どもと一緒に楽しむ上野
@@ -459,7 +459,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--04">
+          <article class="p-article__item p-article__item--04 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 桜も梅も、文化行事も。季節を感じに、上野へ行こう
@@ -471,7 +471,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--05">
+          <article class="p-article__item p-article__item--05 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 歴史ある建築に宿る、オープンでやわらかな児童書の世界
@@ -483,7 +483,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--06">
+          <article class="p-article__item p-article__item--06 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 子どもの本の図書館が案内する、アートの魅力
@@ -495,7 +495,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--07">
+          <article class="p-article__item p-article__item--07 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 上野最古のお堂 清水観音堂で願い玉を投げよう
@@ -507,7 +507,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--08">
+          <article class="p-article__item p-article__item--08 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 観るだけじゃないんです！ 体験できるアート＆カルチャー
@@ -519,7 +519,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--09">
+          <article class="p-article__item p-article__item--09 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 “本物”が身近にある街・上野。気軽に立ち寄れる、とっておきの場所
@@ -531,7 +531,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--10">
+          <article class="p-article__item p-article__item--10 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 日本を代表する彫刻家、朝倉文夫の庭園で感じる四季の移ろい
@@ -550,7 +550,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--11">
+          <article class="p-article__item p-article__item--11 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 上野の文化を支える人たち、紹介します
@@ -562,7 +562,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--12">
+          <article class="p-article__item p-article__item--12 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 上野駅から朝倉彫塑館へ。朝倉文夫作品を訪ね歩く
@@ -574,7 +574,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--13">
+          <article class="p-article__item p-article__item--13 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 谷中の「七福猫」を探せ！
@@ -586,7 +586,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--14">
+          <article class="p-article__item p-article__item--14 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 和太鼓、獅子舞、寛永寺。トーハクに縁起物が勢ぞろい！
@@ -598,7 +598,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--15">
+          <article class="p-article__item p-article__item--15 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 今年の干支・ネズミは「幸福の使者」
@@ -611,7 +611,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--16">
+          <article class="p-article__item p-article__item--16 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 人類進化学者の海部陽介がアーティストたちと語る！<br />
@@ -624,7 +624,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--17">
+          <article class="p-article__item p-article__item--17 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 エキスパートが登場！ 展覧会が10倍楽しくなる方法、教えます
@@ -636,7 +636,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--18">
+          <article class="p-article__item p-article__item--18 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 現役作家の作品に触れたい！ アートが生まれる場所を歩く
@@ -656,7 +656,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--19">
+          <article class="p-article__item p-article__item--19 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 動物園や美術館の後は、上野でお茶する？ ご飯行く？
@@ -668,7 +668,7 @@
               </ul>
             </a>
           </article>
-          <article class="p-article__item p-article__item--20">
+          <article class="p-article__item p-article__item--20 js-fadein">
             <a href="">
               <h2 class="p-article__head">
                 日常生活に取り入れたい、上野カルチャーをテイクアウト！
@@ -759,9 +759,6 @@
 
   </body>
   <style>
-    .swiper-container {
-      width: 100%;
-      height: 100%;
-    }
+    
   </style>
 </html>
