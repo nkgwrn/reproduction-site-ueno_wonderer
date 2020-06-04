@@ -7,14 +7,25 @@ $(window).on("load", function () {
       .attr("src", src)
       .on("load", function () {
         progress++;
+        console.log(progress);
+        console.log(imgCount);
       });
   });
   setInterval(function () {
     $("#progress-bar").css({
       width: (progress / imgCount) * 100 + "%",
     });
+    if ((progress / imgCount) * 100 == 100) {
+      clearInterval(timer);
+      $("#progress-box").delay(200).animate(
+        {
+          opacity: 0,
+        },
+        200
+      );
+    }
   }, 1);
-  $(".p-cover, #progress-box").fadeOut();
+  $(".p-cover").fadeOut();
 
   setTimeout(function () {
     $(".p-mv-right__title, .p-mv-right__copy").fadeIn().addClass("is-open");
