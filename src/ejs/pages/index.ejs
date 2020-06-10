@@ -163,7 +163,7 @@
         </div>
       </section>
       <section class="c-panel p-hashtags">
-        <div class="c-panel__box p-hashtags-left">
+        <div class="c-panel__box p-hashtags-left sticky">
           <div class="p-hashtags-left__inner">
             <div class="p-hashtags__label">
               <div
@@ -588,5 +588,10 @@
     </main>
     <!-- /.l-main -->
     <%- include('../components/_footer'); %>
+    <script src="./js/stickyfill.min.js"></script>
+    <script>
+      var elem = document.querySelectorAll(".sticky");
+      Stickyfill.add(elem);
+    </script>
   </body>
 </html>

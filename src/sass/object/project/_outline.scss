@@ -25,7 +25,8 @@
     font-family: $font-family-otf;
     padding-top: 95px;
     border-top: 5px solid $font-color;
-    display: block !important;
+    display: flex !important;
+    flex-direction: column;
 
     @include mqMd {
       width: 55%;
