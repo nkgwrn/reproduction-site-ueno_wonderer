@@ -985,21 +985,6 @@ img {
   opacity: 1;
 }
 
-.p-cover {
-  width: 100%;
-  height: 100vh;
-  background: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  transition: all 0.3s ease;
-}
-
-.p-cover.is-open {
-  opacity: 0;
-}
-
 /* =========================================================
  Object
 ========================================================= */
@@ -1205,6 +1190,7 @@ img {
 
 .p-hashtags {
   height: auto;
+  position: relative;
 }
 
 .p-hashtags__label {
@@ -1282,6 +1268,12 @@ img {
 
 .p-hashtags-left__link ~ .p-hashtags-left__link {
   margin-left: 0.5rem;
+}
+
+.p-hashtags-left__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .p-article {
@@ -1517,6 +1509,7 @@ img {
   font-family: a-otf-midashi-go-mb31-pr6n, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
   padding-top: 95px;
   border-top: 5px solid #1a1a1a;
+  display: block !important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -2044,4 +2037,5 @@ img {
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   text-align: start;
+  display: inline-block;
 }

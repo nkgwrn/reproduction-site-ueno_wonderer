@@ -25,6 +25,7 @@
     font-family: $font-family-otf;
     padding-top: 95px;
     border-top: 5px solid $font-color;
+    display: block !important;
 
     @include mqMd {
       width: 55%;
