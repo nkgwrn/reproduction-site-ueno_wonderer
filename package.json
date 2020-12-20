@@ -1,22 +1,17 @@
 {
-  "name": "1q-03-ueno_wonderer",
+  "name": "ueno-wonderer",
   "version": "1.0.0",
-  "description": "![Build Status](https://gitlab.com/pages/plain-html/badges/master/build.svg)",
-  "main": "gulpfile.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp",
+    "start": "gulp watch",
+    "deploy": "npm run build && gh-pages -d public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/nakagawara/1q-03-ueno_wonderer.git"
-  },
+  "homepage": "https://nkgwrn.github.io/reproduction-site-ueno_wonderer/",
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/nakagawara/1q-03-ueno_wonderer/issues"
-  },
-  "homepage": "https://gitlab.com/nakagawara/1q-03-ueno_wonderer#README",
   "devDependencies": {
     "autoprefixer": "^9.8.0",
     "browser-sync": "^2.26.7",
