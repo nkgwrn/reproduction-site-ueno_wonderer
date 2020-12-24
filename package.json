@@ -8,7 +8,7 @@
     "start": "gulp watch",
     "deploy": "npm run build && gh-pages -d public"
   },
-  "homepage": "https://nkgwrn.github.io/reproduction-site-ueno_wonderer/",
+  "homepage": "https://nrwgkn.github.io/reproduction-site-ueno_wonderer/",
   "keywords": [],
   "author": "",
   "license": "ISC",
